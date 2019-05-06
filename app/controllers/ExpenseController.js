@@ -86,7 +86,7 @@ router.get('/:id',userAuth,function(req,res) {
     })
 })
 
-//localhost:3005/expenses/:id
+//localhost:3000/expenses/:id
 router.put("/:id", userAuth, upload.single("receipt"), function(req,res){
     const id = req.params.id
     const body = _.pick(req.body,["amountSpent","receipt"])
