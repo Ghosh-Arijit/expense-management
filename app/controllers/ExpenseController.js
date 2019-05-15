@@ -53,7 +53,7 @@ router.post('/',userAuth,function(req,res){
     body.user=req.user._id
     const expense= new Expense(body)
     expense.save()
-    .then(function(user){
+    .then(function(expense){
         res.send({
             expense,
             notice: "Successfully inserted"
